@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    
+    summary {
+      display: block;
+    }
+
+      summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::before {
+      content: '\25B6';
+      padding-right: 0.5em;
+      position: relative;
+      left: 60px;
+    }
+
+    details[open] > summary::before {
+      content: '\25BC';
+    }
+  </style>
+</head>
+<body>
+  <!-- datalist 结合 input 实现自动输入 -->
+  <div>
+    <label for="input">select a element:
+      <input type="text" id="input" list="data">
+      <datalist id="data">
+        <option value="javascript">1</option>
+        <option value="javascript">2</option>
+        <option value="javascript">3</option>
+        <option value="javascript">4</option>
+      </datalist>
+    </label>
+  </div>
+  <!-- del ins元素 -->
+  <div>
+    <p><ins>haha</ins><em>javascript</em> <s>and es</s> is <del>very</del> awesome !</p>
+  </div>
+
+  <!-- summary and detail 元素 -->
+  <div>
+    <details>
+      <summary>
+        年代
+      </summary>
+      <div>
+        <ul>
+          <li>2018</li>
+          <li>2017</li>
+          <li>2016</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- dfn元素 -->
+  <div>
+      <p><dfn id="def-internet">The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</p>
+      <!-- hr 元素的 -->
+      <hr color="red" width="1000px" noshade align="left" size="6px">
+      <p>javascript is awesome but you don't know the ture sense of it.</p>
+      <dl>
+          <!-- Define "World-Wide Web" and reference definition for "the Internet" -->
+          <dt>
+            <dfn>
+              <abbr title="World-Wide Web">WWW</abbr>
+            </dfn>
+          </dt>
+          <dd>The World-Wide Web (WWW) is a system of interlinked hypertext documents accessed on <a href="#def-internet">the Internet</a>.</dd>
+        </dl>
+        <dl>
+            <div>
+              <dt>Name</dt>
+              <dd>Godzilla</dd>
+            </div>
+            <div>
+              <dt>Born</dt>
+              <dd>1952</dd>
+            </div>
+            <div>
+              <dt>Birthplace</dt>
+              <dd>Japan</dd>
+            </div>
+            <div>
+              <dt>Color</dt>
+              <dd>Green</dd>
+            </div>
+          </dl>
+  </div>
+  
+  <!-- fieldset元素 -->
+  <div>
+      <form action="">
+        <fieldset>
+          <legend>title</legend>
+          <label for="input">
+            <input type="text" id="input" list="datas">
+            <datalist id="datas">
+              <option value="ja">1</option>
+              <option value="jaa">2</option>
+            </datalist>
+          </label>
+        </fieldset>
+      </form>
+  </div>
+
+  <div>
+      <figure>
+          <figcaption>Get browser details using navigator</figcaption>
+          <pre>
+        function NavigatorExample() {
+          var txt;
+          txt = "Browser CodeName: " + navigator.appCodeName;
+          txt+= "Browser Name: " + navigator.appName;
+          txt+= "Browser Version: " + navigator.appVersion ;
+          txt+= "Cookies Enabled: " + navigator.cookieEnabled;
+          txt+= "Platform: " + navigator.platform;
+          txt+= "User-agent header: " + navigator.userAgent;
+        }            
+          </pre>
+        </figure>
+  </div>
+
+  <div>
+      <iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe example 1" width="100%" height="300">
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+  </div>
+
+  <div>
+      <base target="_blank">
+      <iframe id="Example2"
+          title="Example2"
+          width="400"
+          height="300"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          src="./ditu.html">
+      </iframe>
+      
+      <br>
+      <small>
+        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593" style="color:#0000FF;text-align:left"> See bigger map </a>
+      </small>
+  </div>
+
+  <div>
+      <map name="primary">
+          <area shape="circle" coords="200,250,25" href="./ditu.html" /> 
+          <area shape="default" nohref />
+      </map>
+  </div>
+
+  <div>
+      <p>Type the following in the Run dialog: <mark><kbd>cmd</kbd></mark><br />Then click the OK button.</p>
+
+      <p>Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
+  </div>
+
+  <!-- math元素 chrome  IE 都未实现-->
+  <div>
+      <math>
+          <mrow>
+            <mrow>
+              <msup>
+                <mi>a</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>+</mo>
+              <msup>
+                <mi>b</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+            <mo>=</mo>
+            <msup>
+              <mi>c</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </math>
+  </div>
+
+  <!-- svg元素 -->
+  <div>
+      <svg width="150" height="100" viewBox="0 0 3 2">
+          <rect width="1" height="2" x="0" fill="#008d46" />
+          <rect width="1" height="2" x="1" fill="#ffffff" />
+          <rect width="1" height="2" x="2" fill="#d2232c" />
+        </svg>      
+  </div>
+
+  <div>
+      <button type="menu" menu="dropdown-menu">
+          Dropdown
+        </button>
+        
+        <menu type="context" id="dropdown-menu">
+          <menuitem label="Action">
+          <menuitem label="Another action">
+          <hr>
+          <menuitem label="Separated action">
+        </menu>
+  </div>
+
+  <div>
+      <p id="Mailing_address">Heat the oven to <meter min="200" max="500"
+        value="350">350 degrees</meter>.</p>
+  </div>
+
+  <div>
+      <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+          <input type="range" name="b" value="50" /> +
+          <input type="number" name="a" value="10" /> =
+          <output name="result"></output>
+      </form>
+  </div>
+
+  <div>
+      <progress value="70" max="100">70%</progress>
+  </div>
+
+  <div>
+      <p>Regular text. <samp>This is sample text.</samp> Regular text.</p>
+      <p>When doing x it is <strong>imperative</strong> to do y before proceeding.</p>
+      <p>h<sub>2</sub>o and <strong><mark>m<sup>2<mark></mark></sup></p>
+  </div>
+
+  <div>
+      <p>Simple table with header</p>
+      <table>
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </table>
+      
+      <p>Table with thead, tfoot, and tbody</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Header content 1</th>
+            <th>Header content 2</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td>Footer content 1</td>
+            <td>Footer content 2</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td>Body content 1</td>
+            <td>Body content 2</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>Table with colgroup</p>
+      <table>
+        <colgroup span="4" class="columns"></colgroup>
+        <tr>
+          <th>Countries</th>
+          <th>Capitals</th>
+          <th>Population</th>
+          <th>Language</th>
+        </tr>
+        <tr>
+          <td>USA</td>
+          <td>Washington D.C.</td>
+          <td>309 million</td>
+          <td>English</td>
+        </tr>
+        <tr>
+          <td>Sweden</td>
+          <td>Stockholm</td>
+          <td>9 million</td>
+          <td>Swedish</td>
+        </tr>
+      </table>
+      
+      <p>Table with colgroup and col</p>
+      <table>
+        <colgroup>
+          <col class="column1">
+          <col class="columns2plus3" span="2">
+        </colgroup>
+        <tr>
+          <th>Lime</th>
+          <th>Lemon</th>
+          <th>Orange</th>
+        </tr>
+        <tr>
+          <td>Green</td>
+          <td>Yellow</td>
+          <td>Orange</td>
+        </tr>
+      </table>
+      
+      <p>Simple table with caption</p>
+      <table>
+        <caption>Awesome caption</caption>
+        <tr>
+          <td>Awesome data</td>
+        </tr>
+      </table>
+  </div>
+
+  <div>
+      <article>
+          <p>This article was created on <time pubdate>2011-01-28</time>.</p>
+        </article>
+  </div>
+
+  <div>
+      <p> A simple equation: <var>x</var> = <var>y</var> + 2 </p>
+  </div>
+
+  <div>
+      <p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+  </div>
+
+  <div>
+      <p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>
+      <p>We hold these truths to be <em>sacred &amp; undeniable</em> self-evident.</p>
+  </div>
+
+  <div>
+    <p>The <a href="#Mailing_address">company mailing address</a> can be found at the bottom of this page.</p>
+  </div>
+
+  <div>
+    <pre><code>var para = document.querySelector('p');
+
+      para.onclick = function() {
+        alert('Owww, stop poking me!');
+      }</code></pre>
+      
+      <p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+      
+      <p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
+      
+      
+      <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+      
+      <pre>$ <kbd>ping mozilla.org</kbd>
+      <samp>PING mozilla.org (63.245.215.20): 56 data bytes
+      64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+  </div>
+
+  <div>
+    <!-- Standard simple date -->
+    <time datetime="2016-01-20">20 January 2016</time>
+    <!-- Just year and month -->
+    <time datetime="2016-01">January 2016</time>
+    <!-- Just month and day -->
+    <time datetime="01-20">20 January</time>
+    <!-- Just time, hours and minutes -->
+    <time datetime="19:30">19:30</time>
+    <!-- You can do seconds and milliseconds too! -->
+    <time datetime="19:30:01.856">19:30:01.856</time>
+    <!-- Date and time -->
+    <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+    <!-- Date and time with timezone offset-->
+    <time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+    <!-- Calling out a specific week number-->
+    <time datetime="2016-W04">The fourth week of 2016</time>
+  </div>
+
+  <section>
+    <h2>Payment information</h2>
+    <p>
+      <label for="card">
+        <span>Card type:</span>
+      </label>
+      <select id="card" name="usercard">
+        <option value="visa">Visa</option>
+        <option value="mc">Mastercard</option>
+        <option value="amex">American Express</option>
+      </select>
+    </p>
+    <p>
+      <label for="number">
+        <span>Card number:</span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+        <input type="text" id="number" name="cardnumber">
+    </p>
+    <p>
+      <label for="date">
+        <span>Expiration date:</span>
+        <strong><abbr title="required">*</abbr></strong>
+        <em>formatted as mm/yy</em>
+      </label>
+      <input type="text" id="date" name="expiration">
+    </p>
+</section>
+</body>
+</html>

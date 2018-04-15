@@ -12,7 +12,9 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "jquery": "^3.3.1",
+    "lodash": "^4.17.5",
     "node-sass": "^4.8.3",
+    "normalize.css": "^8.0.0",
     "popper.js": "^1.14.2",
     "sass-loader": "^6.0.7",
     "vue": "^2.5.16",

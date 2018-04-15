@@ -2,6 +2,11 @@
 
 > some web demos by vue
 
+## 未借助任何插件，自己封装的swiper，效果如下（为了演示动画，设置了较长的interval，pagination is clickable）:
+
+> ![demo](./src/components/swiper-demo/demo/demo1.gif)
+
+
 ## Build Setup
 
 ``` bash
