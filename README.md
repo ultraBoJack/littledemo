@@ -1,8 +1,8 @@
-# demos_vue
+# 一些小demo
 
-> some web demos by vue
+> 小demo
 
-## 未借助任何插件，自己封装的swiper，效果如下（为了演示动画，设置了较长的interval，pagination is clickable）:
+## 一些练习小demo，包括ajax、css grid、indexedDB、还有自己封装的swiper，原生js，效果如下（为了演示动画，设置了较长的interval，pagination is clickable）:
 
 > ![demo](./src/components/swiper-demo/demo/demo1.gif)
 
