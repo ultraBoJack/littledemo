@@ -1,6 +1,6 @@
 # 一些小demo
 
-> 小demo
+> 一些练习小demo，包括ajax、css grid、indexedDB、还有自己封装的swiper，原生js，效果如下（为了演示动画，设置了较长的interval，pagination is clickable）
 
 ## 一些练习小demo，包括ajax、css grid、indexedDB、还有自己封装的swiper，原生js，效果如下（为了演示动画，设置了较长的interval，pagination is clickable）:
 
